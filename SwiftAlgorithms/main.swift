@@ -7,3 +7,6 @@
 
 import Foundation
 
+var array1 = [10, 9, 3, 5, 6, 1, 2]
+
+InsertionSort(array: &array1)
