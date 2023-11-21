@@ -83,7 +83,7 @@ final class SwiftAlgorithmsTestCases: XCTestCase {
         
         // ARRANGE
         let sut = Algorithm()
-        var sortData = [9,2,8,4,3,5,7]
+        var sortData = [9,2,8,4,3,5,7,4,7]
         let expected = [2,3,4,5,7,8,9]
         
         // ACT

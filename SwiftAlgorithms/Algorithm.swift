@@ -26,12 +26,30 @@ class Algorithm {
         }
     
     func mergeSort(data: inout [Int]) -> [Int] {
-        let leftArray = [Int]()
-        let rightArray = [Int]()
-        for i in 0...(data.count/2) {
-            leftArray.append()
-        }
         
+        var leftArray = [Int]()
+        var rightArray = [Int]()
+        
+        if data.count == 0
+        
+        if data.count % 2 == 0 {
+            for i in 1...(data.count/2) {
+                leftArray.append(data[i-1])
+                rightArray.append(data[(data.count/2) + i - 1])
+            }
+        } else {
+            for i in 1...((data.count + 1)/2) {
+                rightArray.append(data[(data.count/2) + i - 1])
+            }
+            for i in 1...((data.count - 1)/2) {
+                leftArray.append(data[i - 1])
+            }
+        }
+            
+        print(leftArray)
+        print(rightArray)
+        
+        mergeSort(data: &leftArray)
         
         return data
     }
