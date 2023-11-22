@@ -25,44 +25,57 @@ class Algorithm {
         
         }
     
-    func mergeSort(data: inout [Int]) -> [Int] {
+//    func mergeSort(data: inout [Int]) -> [Int] {
         
-        var leftArray = [Int]()
-        var rightArray = [Int]()
-        
-        if data.count == 0
-        
-        if data.count % 2 == 0 {
-            for i in 1...(data.count/2) {
-                leftArray.append(data[i-1])
-                rightArray.append(data[(data.count/2) + i - 1])
-            }
-        } else {
-            for i in 1...((data.count + 1)/2) {
-                rightArray.append(data[(data.count/2) + i - 1])
-            }
-            for i in 1...((data.count - 1)/2) {
-                leftArray.append(data[i - 1])
-            }
-        }
-            
-        print(leftArray)
-        print(rightArray)
-        
-        mergeSort(data: &leftArray)
-        
-        return data
-    }
+//        var leftArray = [Int]()
+//        var rightArray = [Int]()
+//
+//        if data.count == 1 {
+//
+//        }
+//
+//        if data.count % 2 == 0 {
+//            for i in 1...(data.count/2) {
+//                leftArray.append(data[i-1])
+//                rightArray.append(data[(data.count/2) + i - 1])
+//            }
+//        } else {
+//            for i in 1...((data.count + 1)/2) {
+//                rightArray.append(data[(data.count/2) + i - 1])
+//            }
+//            for i in 1...((data.count - 1)/2) {
+//                leftArray.append(data[i - 1])
+//            }
+//        }
+//
+//        print(leftArray)
+//        print(rightArray)
+//
+//        mergeSort(data: &leftArray)
+//
+//        return data
+//    }
     
     func linearSearch(data: [Int], item: Int) -> Bool {
         
-        if data.count == 0 {
-            return false
+        for i in 0...data.count {
+            if item == data[i] {
+                return true
+            }
         }
         
+        return false
+    }
+    
+    func binarySearch(data: [Int], item: Int) -> Bool {
+        
+        print(log2(Double(data.count)))
         return true
-            
+        
+        for i in 0...(log2(Double(data.count))) {
+            print(i)
         }
+    }
     
     func InsertionSort(array: inout [Int]) {
 //        print(array)

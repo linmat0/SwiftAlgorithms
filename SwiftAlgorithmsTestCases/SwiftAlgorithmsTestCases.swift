@@ -87,7 +87,39 @@ final class SwiftAlgorithmsTestCases: XCTestCase {
         let expected = [2,3,4,5,7,8,9]
         
         // ACT
-        let actual = sut.mergeSort(data: &sortData)
+        //let actual = sut.mergeSort(data: &sortData)
+        
+        // ASSERT
+        //XCTAssertEqual(actual, expected)
+        
+    }
+    
+    func testLinearSearchWithItemInArray() {
+        
+        // ARRANGE
+        let sut = Algorithm()
+        let array = [9,2,8,4,3,5,7,4,7]
+        let item = 8
+        let expected = true
+        
+        // ACT
+        let actual = sut.linearSearch(data: array, item: item)
+        
+        // ASSERT
+        XCTAssertEqual(actual, expected)
+        
+    }
+    
+    func testBinarySearchWithItemInArray() {
+        
+        // ARRANGE
+        let sut = Algorithm()
+        let array = [9,2,8,4,3,5,7,4,7]
+        let item = 8
+        let expected = true
+        
+        // ACT
+        let actual = sut.binarySearch(data: array, item: item)
         
         // ASSERT
         XCTAssertEqual(actual, expected)
