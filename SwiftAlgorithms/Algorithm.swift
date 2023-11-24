@@ -68,13 +68,37 @@ class Algorithm {
     }
     
     func binarySearch(data: [Int], item: Int) -> Bool {
+        if data.count <=  1 {
+            if item == data[0] {
+                return true
+            } else {
+                return false
+            }
+        }
         
-        print(log2(Double(data.count)))
+        var index = data.count/2
+        print(index)
+        
+        if item == data[index] {
+            return true
+        } else if item < data[index] {
+            var leftArray = [Int]()
+            for i in 0...(index-1) {
+                leftArray.append(data[i])
+            }
+            print(leftArray)
+            binarySearch(data: leftArray, item: item)
+        } else if item > data[index] {
+            var rightArray = [Int]()
+            for i in 0...(index) {
+                rightArray.append(data[index + i])
+            }
+            print(rightArray)
+            binarySearch(data: rightArray, item: item)
+        }
+        
         return true
         
-        for i in 0...(log2(Double(data.count))) {
-            print(i)
-        }
     }
     
     func InsertionSort(array: inout [Int]) {

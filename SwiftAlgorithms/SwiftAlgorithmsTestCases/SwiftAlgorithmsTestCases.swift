@@ -114,8 +114,8 @@ final class SwiftAlgorithmsTestCases: XCTestCase {
         
         // ARRANGE
         let sut = Algorithm()
-        let array = [9,2,8,4,3,5,7,4,7]
-        let item = 8
+        let array = [0,1,2,3,4,5,6,7,8,9,10]
+        let item = 9
         let expected = true
         
         // ACT

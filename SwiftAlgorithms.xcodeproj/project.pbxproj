@@ -63,7 +63,6 @@
 			isa = PBXGroup;
 			children = (
 				716C481F2AF133E800410F35 /* SwiftAlgorithms */,
-				7131479A2AFA69120021AD0C /* SwiftAlgorithmsTestCases */,
 				716C481E2AF133E800410F35 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -82,6 +81,7 @@
 			children = (
 				716C48202AF133E800410F35 /* main.swift */,
 				713147A02AFA69C50021AD0C /* Algorithm.swift */,
+				7131479A2AFA69120021AD0C /* SwiftAlgorithmsTestCases */,
 			);
 			path = SwiftAlgorithms;
 			sourceTree = "<group>";
